@@ -74,11 +74,80 @@ public class ClockDisplay
     }
     
     /**
-     * Update the internal string that represents the display.
+     * Update the internal string that represents the display, including
+     * AM or PM.
      */
     private void updateDisplay()
     {
-        displayString = hours.getDisplayValue() + ":" + 
-                        minutes.getDisplayValue();
+        if(hours.getValue() == 0)
+            {
+                displayString = "12" + ":" +
+                minutes.getDisplayValue() + "AM";
+            }
+            else if(hours.getValue() > 0 && hours.getValue() < 12)
+            {
+                displayString = hours.getDisplayValue() +
+                ":" + minutes.getDisplayValue() + "AM";
+            }
+            else if(hours.getValue() == 12)
+            {
+                displayString = "12" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 13)
+            {
+                displayString = "1" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 14)
+            {
+                displayString = "2" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 15)
+            {
+                displayString = "3" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 16)
+            {
+                displayString = "4" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 17)
+            {
+                displayString = "5" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 18)
+            {
+                displayString = "6" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 19)
+            {
+                displayString = "7" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 20)
+            {
+                displayString = "8" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 21)
+            {
+                displayString = "9" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 22)
+            {
+                displayString = "10" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
+            else if(hours.getValue() == 23)
+            {
+                displayString = "11" + ":" + minutes.getDisplayValue()
+                + "PM";
+            }
     }
 }
